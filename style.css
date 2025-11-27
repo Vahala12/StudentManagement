@@ -1,0 +1,172 @@
+/* =============================
+   RESET & GIAO DIỆN CHUNG
+============================= */
+body {
+    background: linear-gradient(135deg, #6db3f2, #1c1c84);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* =============================
+   TRANG LOGIN / REGISTER
+============================= */
+.login-page,
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px; /* tránh bị navbar đè */
+}
+
+/* CARD FORM LOGIN */
+.card {
+    width: 400px;
+    padding: 30px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card-title {
+    font-size: 38px;
+    text-align: center;
+    color: #1d2c3d;
+    text-shadow: 0 0 8px rgba(80, 80, 80, 0.3);
+    margin-bottom: 20px;
+}
+
+/* LABEL */
+.mb-3 label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    font-style: italic;
+}
+
+/* INPUT FORM */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    transition: 0.2s;
+}
+
+.form-control:focus {
+    border-color: #3f7ef3;
+    box-shadow: 0 0 10px rgba(63, 126, 243, 0.4);
+}
+
+/* =============================
+   BUTTON LOGIN / REGISTER
+============================= */
+.login-page .btn-primary,
+.register-page .btn-success {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 15px;
+    font-size: 17px;
+    padding: 8px 0;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.login-page .btn-primary:hover,
+.register-page .btn-success:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.login-page .btn-primary:active,
+.register-page .btn-success:active {
+    transform: scale(0.97);
+    opacity: 0.6;
+}
+
+/* =============================
+   LINK
+============================= */
+.btn-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #0a4ade;
+    font-size: 15px;
+    transition: 0.15s;
+}
+
+.btn-link:hover { color: red; }
+.btn-link:active { color: #555 !important; }
+
+/* =============================
+   NAVBAR
+============================= */
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 22px;
+    color: white !important;
+}
+
+.btn-outline-light,
+.btn-light {
+    font-family: 'Times New Roman', serif;
+    font-size: 14px;
+    padding: 5px 14px;
+    border-radius: 10px;
+}
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* =============================
+   FIX GIẢI QUYẾT LỖI CẮT CHỮ
+============================= */
+button,
+.btn {
+    writing-mode: horizontal-tb !important;
+    white-space: normal !important;
+    flex-shrink: 0;
+}
+
+/* =============================
+   FORM QUẢN LÝ USER — HÀNG NGANG
+============================= */
+.user-form-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: nowrap;
+}
+
+/* 4 ô input rộng hơn */
+.user-form-row .form-control,
+.user-form-row select {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    flex-shrink: 0;
+}
+
+.user-form-row button {
+    padding: 8px 22px;
+    white-space: nowrap;
+    width: auto !important;
+    margin: 0 !important;
+}
